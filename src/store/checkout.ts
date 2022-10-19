@@ -37,7 +37,7 @@ export const defaultCheckout: CheckoutState = {
   payable_amount: 0,
   use_wallet: false,
 };
-export type PaymentMethodName = 'CASH_ON_DELIVERY' | 'STRIPE';
+export type PaymentMethodName = 'CASH_ON_DELIVERY' ;
 
 // Original atom.
 export const checkoutAtom = atomWithStorage(CHECKOUT, defaultCheckout);

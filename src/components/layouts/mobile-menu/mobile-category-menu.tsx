@@ -6,6 +6,7 @@ export default function MobileCategoryMenu({ variables }: { variables: any }) {
     <DrawerWrapper>
       <div className="h-full max-h-full">
         <Categories layout="classic" className="!block" variables={variables} />
+
       </div>
     </DrawerWrapper>
   );

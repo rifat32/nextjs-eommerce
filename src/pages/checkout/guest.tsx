@@ -66,11 +66,11 @@ export default function GuestCheckoutPage() {
               atom={shippingAddressAtom}
               type={AddressType.Shipping}
             />
-            <ScheduleGrid
+            {/* <ScheduleGrid
               className="bg-light p-5 shadow-700 md:p-8"
               label={t('text-delivery-schedule')}
               count={4}
-            />
+            /> */}
           </div>
           <div className="mt-10 mb-10 w-full sm:mb-12 lg:mb-0 lg:w-96">
             <RightSideView />

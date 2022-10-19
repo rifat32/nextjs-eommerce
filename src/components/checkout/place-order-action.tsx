@@ -94,10 +94,10 @@ export const PlaceOrderAction: React.FC<{ className?: string }> = (props) => {
         ...(shipping_address?.address && shipping_address.address),
       },
     };
-    if (payment_gateway === 'STRIPE') {
-      //@ts-ignore
-      input.token = token;
-    }
+    // if (payment_gateway === 'STRIPE') {
+    //   //@ts-ignore
+    //   input.token = token;
+    // }
 
     delete input.billing_address.__typename;
     delete input.shipping_address.__typename;
@@ -115,7 +115,7 @@ export const PlaceOrderAction: React.FC<{ className?: string }> = (props) => {
         payment_gateway,
         billing_address,
         shipping_address,
-        delivery_time,
+        // delivery_time,
         available_items,
       ];
   const isAllRequiredFieldSelected = formatRequiredFields.every(
