@@ -14,6 +14,7 @@ const Axios = axios.create({
 // Change request data/error here
 Axios.interceptors.request.use((config) => {
   const token = Cookies.get(AUTH_TOKEN_KEY);
+  console.log("token...",token);
   config.headers = {
     ...config.headers,
     Authorization: `Bearer ${token ? token : ''}`,
