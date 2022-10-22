@@ -92,7 +92,7 @@ function OrderView({ order, language }: any) {
 
         {/* start of order Status */}
         <div className="mb-8 flex w-full items-center justify-center md:mb-12">
-          <OrderStatuses status={order?.status?.serial} language={language} />
+          <OrderStatuses status={order?.status?.serial} orderStatus={order.status}  language={language} />
         </div>
         {/* end of order Status */}
 

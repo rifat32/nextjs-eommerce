@@ -185,7 +185,9 @@ const OrderDetails = ({ order }: Props) => {
       {/* Order Table */}
       <div>
         <div className="flex w-full items-center justify-center px-6">
-          <OrderStatuses status={status?.serial} language={order?.language} />
+         
+          <OrderStatuses status={status?.serial} orderStatus={order.status}  language={order?.language} />
+         
         </div>
         <OrderItems products={products} orderId={id} />
       </div>
