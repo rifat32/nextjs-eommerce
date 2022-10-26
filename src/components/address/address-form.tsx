@@ -67,6 +67,7 @@ export const AddressForm: React.FC<any> = ({
                 type="radio"
                 value={AddressType.Billing}
                 label={t('text-billing')}
+                readOnly
               />
               <Radio
                 id="shipping"
@@ -74,6 +75,7 @@ export const AddressForm: React.FC<any> = ({
                 type="radio"
                 value={AddressType.Shipping}
                 label={t('text-shipping')}
+                readOnly
               />
             </div>
           </div>

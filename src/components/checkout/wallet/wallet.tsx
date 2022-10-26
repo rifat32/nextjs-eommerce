@@ -65,14 +65,14 @@ const Wallet = ({ totalPrice, walletAmount, walletCurrency }: Props) => {
         </div>
       </div>
 
-      <Checkbox
+      {/* <Checkbox
         name="use_wallet"
         label={t('text-wallet-use')}
         className="mt-3"
         onChange={setUseWallet}
         checked={use_wallet}
         disabled={!walletAmount}
-      />
+      /> */}
 
       {use_wallet && (
         <div className="mt-4 flex justify-between border-t-4 border-double border-border-base pt-3">

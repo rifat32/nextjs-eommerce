@@ -27,8 +27,10 @@ export default function AddOrUpdateContact() {
       </h1>
       {useOtp ? (
         <OtpForm phoneNumber={contactNumber} onVerifySuccess={onSubmit} />
-      ) : (
-        <PhoneNumberForm onSubmit={onSubmit} phoneNumber={contactNumber} />
+      ) : (<>
+       <PhoneNumberForm onSubmit={onSubmit} phoneNumber={contactNumber} />
+      </>
+       
       )}
     </div>
   );

@@ -109,17 +109,23 @@ export const PlaceOrderAction: React.FC<{ className?: string }> = (props) => {
   );
 
   const formatRequiredFields = isDigitalCheckout
-    ? [customer_contact, payment_gateway, available_items]
+    ? [customer_contact, payment_gateway,
+      //  available_items
+      ]
     : [
-        customer_contact,
-        payment_gateway,
-        billing_address,
-        shipping_address,
+        // customer_contact,
+        // payment_gateway,
+        // billing_address,
+        // shipping_address
+        
         // delivery_time,
-        available_items,
+        // available_items,
       ];
   const isAllRequiredFieldSelected = formatRequiredFields.every(
-    (item) => !isEmpty(item)
+    (item) => {
+      
+      !isEmpty(item)
+    }
   );
   return (
     <>
