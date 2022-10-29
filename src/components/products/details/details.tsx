@@ -222,12 +222,12 @@ const Details: React.FC<Props> = ({
                 </span>
               )}
 
-              {isModal && (
+              {/* {isModal && (
                 <div className="inline-flex shrink-0 items-center rounded border border-accent bg-accent px-3 py-1 text-sm text-white">
                   {ratings}
                   <StarIcon className="h-2.5 w-2.5 ltr:ml-1 rtl:mr-1" />
                 </div>
-              )}
+              )} */}
             </div>
 
             {/* {description && (
@@ -285,13 +285,14 @@ const Details: React.FC<Props> = ({
                   disabled={selectedVariation?.is_disable || !isSelected}
                 />
               </div>
-
+{/* <span className="whitespace-nowrap text-base text-body ltr:lg:ml-7 rtl:lg:mr-7">
+                      {quantity} {t('text-pieces-available')}
+                    </span> */}
               {!hasVariations && (
                 <>
                   {Number(quantity) > 0 ? (
-                    <span className="whitespace-nowrap text-base text-body ltr:lg:ml-7 rtl:lg:mr-7">
-                      {quantity} {t('text-pieces-available')}
-                    </span>
+                    <></>
+                    
                   ) : (
                     <div className="whitespace-nowrap text-base text-red-500 ltr:lg:ml-7 rtl:lg:mr-7">
                       {t('text-out-stock')}
@@ -320,7 +321,7 @@ const Details: React.FC<Props> = ({
             />
           )}
 
-          {shop?.name && (
+          {/* {shop?.name && (
             <div className="mt-2 flex items-center">
               <span className="py-1 text-sm font-semibold capitalize text-heading ltr:mr-6 rtl:ml-6">
                 {t('common:text-sellers')}
@@ -333,7 +334,7 @@ const Details: React.FC<Props> = ({
                 {shop?.name}
               </button>
             </div>
-          )}
+          )} */}
         </div>
       </div>
 
@@ -344,7 +345,7 @@ const Details: React.FC<Props> = ({
         <h2 className="mb-4 text-lg font-semibold tracking-tight text-heading md:mb-6">
           {t('text-details')}
         </h2>
-        <p className="text-sm text-body">{description}</p>
+        <p className="text-sm text-body" dangerouslySetInnerHTML={{ __html: description }}></p>
       </Element>
     </article>
   );

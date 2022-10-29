@@ -36,6 +36,7 @@ const Coupon = ({ theme }: { theme?: 'dark' }) => {
     );
   }
   function onSubmit(code: FormTypes) {
+
     // verifyCoupon(
     //   {
     //     code,
@@ -54,9 +55,19 @@ const Coupon = ({ theme }: { theme?: 'dark' }) => {
     //   //   },
     //   // }
     // );
+  
     verifyCoupon({
       code: code?.code
     });
+    // applyCoupon( {
+    //   id: "1",
+    //   name: "4",
+    //   slug: "25",
+    //   amount: "5",
+    //   code: "2"
+    // }
+    // )
+    // console.log("fffffffff")
   }
 
   return (

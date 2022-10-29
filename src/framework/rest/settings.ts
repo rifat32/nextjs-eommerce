@@ -80,12 +80,15 @@ export function useVerifyCoupon() {
   let [formError, setFormError] = useState<any>(null);
 
   const { mutate, isLoading } = useMutation(client.coupons.verify, {
+    
     onSuccess: (data:any) => {
+      setFormError(null);
       if (!data.is_valid) {
         setFormError({
           code: t('error-invalid-coupon'),
         });
       }
+      
       applyCoupon(data?.coupon);
     },
     onError: (error) => {

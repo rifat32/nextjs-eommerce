@@ -21,6 +21,10 @@ const RightSideView = dynamic(
   () => import('@/components/checkout/right-side-view'),
   { ssr: false }
 );
+const CouponGrid = dynamic(
+  () => import('@/components/checkout/coupon'),
+  { ssr: false }
+);
 
 export default function CheckoutPage() {
   const { t } = useTranslation();
@@ -46,7 +50,7 @@ export default function CheckoutPage() {
               count={2}
               //@ts-ignore
               addresses={address?.filter(
-                (item) => item?.type === AddressType.Billing
+                (item) => item?.type == AddressType.Billing
               )}
               atom={billingAddressAtom}
               type={AddressType.Billing}
@@ -58,7 +62,7 @@ export default function CheckoutPage() {
               count={3}
               //@ts-ignore
               addresses={address?.filter(
-                (item) => item?.type === AddressType.Shipping
+                (item) => item?.type == AddressType.Shipping
               )}
               atom={shippingAddressAtom}
               type={AddressType.Shipping}
@@ -70,8 +74,10 @@ export default function CheckoutPage() {
             /> */}
           </div>
           <div className="w-full mt-10 mb-10 sm:mb-12 lg:mb-0 lg:w-96">
+          <CouponGrid/>
             <RightSideView />
           </div>
+          
         </div>
       </div>
     </>

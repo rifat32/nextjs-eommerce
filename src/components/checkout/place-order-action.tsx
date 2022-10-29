@@ -113,6 +113,7 @@ export const PlaceOrderAction: React.FC<{ className?: string }> = (props) => {
       //  available_items
       ]
     : [
+   
         // customer_contact,
         // payment_gateway,
         // billing_address,
