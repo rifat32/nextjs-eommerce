@@ -1,11 +1,11 @@
 import { Routes } from '@/config/routes';
 
 export const siteSettings = {
-  name: 'BDPetcare',
+  name: 'BD Pet Care',
   description: '',
   logo: {
     url: '/logo.svg',
-    alt: 'BDPetcare',
+    alt: 'BD Pet Care',
     href: '/grocery',
     width: 128,
     height: 40,

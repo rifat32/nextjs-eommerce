@@ -18,7 +18,7 @@ const Logo: React.FC<React.AnchorHTMLAttributes<{}>> = ({
         <Image
           // src={logo?.original ?? logoPlaceholder}
           src={`${backend}/img/1646725153.png`}
-          alt={siteTitle || 'Bdpetcare Logo'}
+          alt={siteTitle || 'BD PET CARE Logo'}
           layout="fill"
           objectFit="contain"
           loading="eager"
