@@ -142,7 +142,7 @@ const OrderDetails = ({ order }: Props) => {
             </span>
           </div>
 
-          <div>
+          {/* <div>
             <span className="mb-2 block text-sm font-bold text-heading">
               {t('text-billing-address')}
             </span>
@@ -150,7 +150,7 @@ const OrderDetails = ({ order }: Props) => {
             <span className="text-sm text-body">
               {formatAddress(billing_address)}
             </span>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex w-full flex-col px-5 py-4 md:w-2/5">

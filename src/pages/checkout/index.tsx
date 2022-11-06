@@ -43,7 +43,7 @@ export default function CheckoutPage() {
               count={1}
             />
 
-            <AddressGrid
+            {/* <AddressGrid
               userId={id!}
               className="p-5 bg-light shadow-700 md:p-8"
               label={t('text-billing-address')}
@@ -54,7 +54,7 @@ export default function CheckoutPage() {
               )}
               atom={billingAddressAtom}
               type={AddressType.Billing}
-            />
+            /> */}
             <AddressGrid
               userId={me?.id!}
               className="p-5 bg-light shadow-700 md:p-8"

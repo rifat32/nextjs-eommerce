@@ -29,11 +29,13 @@ const ContactGrid = ({
   const { t } = useTranslation('common');
 
   useEffect(() => {
+
     if (contact) {
       setContactNumber(contact);
       return;
     }
     setContactNumber('');
+
   }, [contact, setContactNumber]);
 
   function onAddOrChange() {
@@ -50,13 +52,14 @@ const ContactGrid = ({
   return (
     <div className="flex flex-col justify-center min-h-screen p-5 bg-light sm:p-8 md:min-h-0 md:rounded-xl">
        <div className={classNames('w-full', gridClassName)}>
-        <PhoneInput
+        Phone Number: {contactNumber}
+        {/* <PhoneInput
           country="bd"
           value={contactNumber}
           disabled={true}
           inputClass="!p-0 ltr:!pr-4 rtl:!pl-4 ltr:!pl-14 rtl:!pr-14 !flex !items-center !w-full !appearance-none !transition !duration-300 !ease-in-out !text-heading !text-sm focus:!outline-none focus:!ring-0 !border !border-border-base !rounded focus:!border-accent !h-12"
           dropdownClass="focus:!ring-0 !border !border-border-base !shadow-350"
-        />
+        /> */}
       </div>
       <h1 className="mb-5 text-sm font-semibold text-center text-heading sm:mb-6">
         {contactNumber ? t('text-update') : t('text-add-new')}{' '}

@@ -198,7 +198,7 @@ function OrderView({ order, language }: any) {
                   </span>
                 </p>
               )}
-              {!isEmpty(order?.billing_address) && (
+              {/* {!isEmpty(order?.billing_address) && (
                 <p className="mt-5 flex text-body-dark">
                   <strong className="w-4/12 text-sm font-semibold text-heading">
                     {t('text-billing-address')}
@@ -208,7 +208,7 @@ function OrderView({ order, language }: any) {
                     {formatAddress(order?.billing_address!)}
                   </span>
                 </p>
-              )}
+              )} */}
             </div>
           </div>
           {/* end of order details */}

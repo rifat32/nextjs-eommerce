@@ -50,14 +50,14 @@ export default function GuestCheckoutPage() {
               count={1}
             />
 
-            <GuestAddressGrid
+            {/* <GuestAddressGrid
               className="bg-light p-5 shadow-700 md:p-8"
               label={t('text-billing-address')}
               count={2}
               addresses={billingAddress ? [billingAddress] : []}
               atom={billingAddressAtom}
               type={AddressType.Billing}
-            />
+            /> */}
             <GuestAddressGrid
               className="bg-light p-5 shadow-700 md:p-8"
               label={t('text-shipping-address')}
