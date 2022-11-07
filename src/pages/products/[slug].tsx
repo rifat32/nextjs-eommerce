@@ -25,6 +25,8 @@ const CartCounterButton = dynamic(
   { ssr: false }
 );
 
+
+
 const ProductPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
 > = ({ product } : any) => {
