@@ -49,6 +49,11 @@ const ContactGrid = ({
     setContactNumber(phone_number);
     // closeModal();
   }
+  function onChange(e:any) {
+    console.log("element",e)
+    // setContactNumber(phone_number);
+    // closeModal();
+  }
   return (
     <div className="flex flex-col justify-center min-h-screen p-5 bg-light sm:p-8 md:min-h-0 md:rounded-xl">
        <div className={classNames('w-full', gridClassName)}>
@@ -68,7 +73,7 @@ const ContactGrid = ({
       {useOtp ? (
         <OtpForm phoneNumber={contactNumber} onVerifySuccess={onSubmit} />
       ) : (<>
-       <PhoneNumberForm onSubmit={onSubmit} phoneNumber={contactNumber} />
+       <PhoneNumberForm onSubmit={onSubmit} onChange={onChange} phoneNumber={contactNumber} />
       </>
        
       )}
